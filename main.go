@@ -19,6 +19,9 @@ func check(err error) {
 }
 
 func fraction(n int) (x, y int) {
+	if n == 0 {
+		return
+	}
 	x = int(math.Sqrt(float64(n)))
 	for n%x != 0 {
 		x--
